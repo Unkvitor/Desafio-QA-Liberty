@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-04T20:37:06.548470" rpa="false" schemaversion="5">
+<suite id="s1" name="Desafio" source="C:\Users\Liberty\Desktop\DESAFIO QA\desafio.robot">
+<test id="s1-t1" name="cenário 1: abrir navegador colocar login e senha e clicar em entrar" line="26">
+<kw name="abrir navegador">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-04T20:37:07.302976" level="INFO">Opening browser 'chrome' to base url 'https://treinamento.libertyti.com.br/aghu/pages/casca/casca.xhtml'.</msg>
+<arg>https://treinamento.libertyti.com.br/aghu/pages/casca/casca.xhtml</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-04T20:37:07.302730" elapsed="6.225803"/>
+</kw>
+<status status="PASS" start="2025-06-04T20:37:07.301949" elapsed="6.228672"/>
+</kw>
+<kw name="colocar login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-04T20:37:13.534805" level="INFO">Typing text 'sghx' into text field '//*[@id="usuario:usuario:inputId"]'.</msg>
+<arg>${input_usuario}</arg>
+<arg>sghx</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T20:37:13.533387" elapsed="0.391379"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-04T20:37:13.926178" level="INFO">Typing text '123' into text field '//*[@id="password:inputId"]'.</msg>
+<arg>${input_senha}</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T20:37:13.925325" elapsed="0.134305"/>
+</kw>
+<status status="PASS" start="2025-06-04T20:37:13.532170" elapsed="0.528039"/>
+</kw>
+<kw name="clicar em entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T20:37:14.064003" level="INFO">Clicking element '//*[@id="entrar"]/span'.</msg>
+<arg>//*[@id="entrar"]/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T20:37:14.062577" elapsed="4.401727"/>
+</kw>
+<status status="PASS" start="2025-06-04T20:37:14.061312" elapsed="4.403422"/>
+</kw>
+<status status="PASS" start="2025-06-04T20:37:07.301013" elapsed="11.164605"/>
+</test>
+<status status="PASS" start="2025-06-04T20:37:06.552453" elapsed="11.915569"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Desafio" id="s1" pass="1" fail="0" skip="0">Desafio</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
