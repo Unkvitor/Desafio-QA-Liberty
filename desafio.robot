@@ -38,7 +38,15 @@ clicar em parametros do sistema
     Scroll Element Into View        //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
     Click Element                   //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
 
+trocar frame para parametros
+    Select Frame    //*[@id="i_frame_parâmetros_de_sistema"]   
 
+inserir nome do parametro
+    Input Text          ${input_parametro}        P_FLUXO_CERTIFICADO_DIGITAL_EMERGENCIA
+
+Clicar em Pesquisar
+    Click Element                   //*[@id="bt_pesquisar:button"]/span[2]
+ 
 
 *** Test Cases ***
 cenário 1: abrir navegador colocar login e senha e clicar em entrar
@@ -52,3 +60,7 @@ cenario 2: Acessar outros modulos → configuracoes → sistema → parametros d
     clicar em sistema
     clicar em parametros do sistema
 
+cenario 3: Inserir o nome do parametro e pesquisar
+    trocar frame para parametros
+    inserir nome do parametro
+    Clicar em Pesquisar
