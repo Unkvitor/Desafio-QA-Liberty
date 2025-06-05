@@ -1,55 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-04T20:37:06.548470" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3 (Python 3.13.4 on win32)" generated="2025-06-04T21:41:12.412705" rpa="false" schemaversion="5">
 <suite id="s1" name="Desafio" source="C:\Users\Liberty\Desktop\DESAFIO QA\desafio.robot">
-<test id="s1-t1" name="cenário 1: abrir navegador colocar login e senha e clicar em entrar" line="26">
+<test id="s1-t1" name="cenário 1: abrir navegador colocar login e senha e clicar em entrar" line="44">
 <kw name="abrir navegador">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-04T20:37:07.302976" level="INFO">Opening browser 'chrome' to base url 'https://treinamento.libertyti.com.br/aghu/pages/casca/casca.xhtml'.</msg>
+<msg time="2025-06-04T21:41:13.052064" level="INFO">Opening browser 'chrome' to base url 'https://treinamento.libertyti.com.br/aghu/pages/casca/casca.xhtml'.</msg>
 <arg>https://treinamento.libertyti.com.br/aghu/pages/casca/casca.xhtml</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-04T20:37:07.302730" elapsed="6.225803"/>
+<status status="PASS" start="2025-06-04T21:41:13.051725" elapsed="5.659792"/>
 </kw>
-<status status="PASS" start="2025-06-04T20:37:07.301949" elapsed="6.228672"/>
+<status status="PASS" start="2025-06-04T21:41:13.050583" elapsed="5.661625"/>
 </kw>
 <kw name="colocar login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T20:37:13.534805" level="INFO">Typing text 'sghx' into text field '//*[@id="usuario:usuario:inputId"]'.</msg>
+<msg time="2025-06-04T21:41:18.716469" level="INFO">Typing text 'sghx' into text field '//*[@id="usuario:usuario:inputId"]'.</msg>
 <arg>${input_usuario}</arg>
 <arg>sghx</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T20:37:13.533387" elapsed="0.391379"/>
+<status status="PASS" start="2025-06-04T21:41:18.715156" elapsed="0.251418"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-04T20:37:13.926178" level="INFO">Typing text '123' into text field '//*[@id="password:inputId"]'.</msg>
+<msg time="2025-06-04T21:41:18.969464" level="INFO">Typing text '123' into text field '//*[@id="password:inputId"]'.</msg>
 <arg>${input_senha}</arg>
 <arg>123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T20:37:13.925325" elapsed="0.134305"/>
+<status status="PASS" start="2025-06-04T21:41:18.967594" elapsed="0.193779"/>
 </kw>
-<status status="PASS" start="2025-06-04T20:37:13.532170" elapsed="0.528039"/>
+<status status="PASS" start="2025-06-04T21:41:18.713708" elapsed="0.448214"/>
 </kw>
 <kw name="clicar em entrar">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-04T20:37:14.064003" level="INFO">Clicking element '//*[@id="entrar"]/span'.</msg>
+<msg time="2025-06-04T21:41:19.164094" level="INFO">Clicking element '//*[@id="entrar"]/span'.</msg>
 <arg>//*[@id="entrar"]/span</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-04T20:37:14.062577" elapsed="4.401727"/>
+<status status="PASS" start="2025-06-04T21:41:19.163514" elapsed="4.278318"/>
 </kw>
-<status status="PASS" start="2025-06-04T20:37:14.061312" elapsed="4.403422"/>
+<status status="PASS" start="2025-06-04T21:41:19.162578" elapsed="4.279515"/>
 </kw>
-<status status="PASS" start="2025-06-04T20:37:07.301013" elapsed="11.164605"/>
+<kw name="clicar em outros modulos">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="nav-scroll"]/ul/li[14]/a/span</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-04T21:41:23.443572" elapsed="0.371091"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T21:41:23.816253" level="INFO">Clicking element '//*[@id="nav-scroll"]/ul/li[14]/a/span'.</msg>
+<arg>//*[@id="nav-scroll"]/ul/li[14]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T21:41:23.815359" elapsed="0.174179"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:23.442805" elapsed="0.547049"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:13.049248" elapsed="10.941515"/>
 </test>
-<status status="PASS" start="2025-06-04T20:37:06.552453" elapsed="11.915569"/>
+<test id="s1-t2" name="cenario 2: Acessar outros modulos → configuracoes → sistema → parametros de sistema" line="50">
+<kw name="clicar em configuracoes">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-04T21:41:23.997353" elapsed="0.347343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T21:41:24.345774" level="INFO">Clicking element '//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span'.</msg>
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T21:41:24.345180" elapsed="0.187544"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:23.996235" elapsed="0.536812"/>
+</kw>
+<kw name="clicar em sistema">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-04T21:41:24.535142" elapsed="0.342477"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T21:41:24.878982" level="INFO">Clicking element '//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a'.</msg>
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T21:41:24.878176" elapsed="0.184633"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:24.534066" elapsed="0.529024"/>
+</kw>
+<kw name="clicar em parametros do sistema">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-06-04T21:41:25.064917" elapsed="0.344516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-04T21:41:25.410409" level="INFO">Clicking element '//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span'.</msg>
+<arg>//*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-04T21:41:25.409853" elapsed="0.188332"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:25.063989" elapsed="0.534622"/>
+</kw>
+<status status="PASS" start="2025-06-04T21:41:23.992192" elapsed="1.607311"/>
+</test>
+<status status="PASS" start="2025-06-04T21:41:12.417300" elapsed="13.184235"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Desafio" id="s1" pass="1" fail="0" skip="0">Desafio</stat>
+<stat name="Desafio" id="s1" pass="2" fail="0" skip="0">Desafio</stat>
 </suite>
 </statistics>
 <errors>

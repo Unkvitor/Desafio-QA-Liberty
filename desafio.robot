@@ -1,9 +1,10 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library     SeleniumLibrary
 
 *** Variables ***
 ${input_usuario}             //*[@id="usuario:usuario:inputId"]
 ${input_senha}              //*[@id="password:inputId"]
+${input_parametro}          //*[@id="nome:nome:inputId"]
 
 
 
@@ -21,6 +22,23 @@ clicar em entrar
 fechar navegador
     close Browser
 
+clicar em outros modulos
+    Scroll Element Into View         //*[@id="nav-scroll"]/ul/li[14]/a/span
+    Click Element                   //*[@id="nav-scroll"]/ul/li[14]/a/span
+
+clicar em configuracoes
+    Scroll Element Into View        //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span
+    Click Element                   //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span
+
+clicar em sistema                   
+    Scroll Element Into View        //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a
+    Click Element                   //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a
+
+clicar em parametros do sistema
+    Scroll Element Into View        //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
+    Click Element                   //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
+
+
 
 *** Test Cases ***
 cenário 1: abrir navegador colocar login e senha e clicar em entrar
@@ -28,5 +46,9 @@ cenário 1: abrir navegador colocar login e senha e clicar em entrar
     colocar login
     clicar em entrar
         
-
+    clicar em outros modulos
+cenario 2: Acessar outros modulos → configuracoes → sistema → parametros de sistema
+    clicar em configuracoes
+    clicar em sistema
+    clicar em parametros do sistema
 
