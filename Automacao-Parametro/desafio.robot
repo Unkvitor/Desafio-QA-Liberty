@@ -2,10 +2,10 @@
 Library     SeleniumLibrary     timeout=3s
 
 *** Variables ***
-${input_usuario}             //*[@id="usuario:usuario:inputId"]
-${input_senha}              //*[@id="password:inputId"]
-${input_parametro}          //*[@id="nome:nome:inputId"]
-${input_valor}              //*[@id="vlrTexto:vlrTexto:inputId"]
+${input_usuario}                //*[@id="usuario:usuario:inputId"]
+${input_senha}                  //*[@id="password:inputId"]
+${input_parametro}              //*[@id="nome:nome:inputId"]
+${input_valor}                  //*[@id="vlrTexto:vlrTexto:inputId"]
 
 
 *** Keywords ***  
@@ -56,7 +56,7 @@ clicar em editar
     sleep       1s
 
 alterar valor texto
-    Input Text                                  ${input_valor}      S
+    Input Text                                  ${input_valor}          S
 
 clicar em gravar
     Wait Until Element Is Visible               //*[@id="bt_confirmar:button"]
