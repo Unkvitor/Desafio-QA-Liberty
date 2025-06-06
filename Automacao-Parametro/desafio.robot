@@ -48,7 +48,7 @@ trocar frame para parametros
 inserir nome do parametro
     Input Text                                   ${input_parametro}        P_FLUXO_CERTIFICADO_DIGITAL_EMERGENCIA
 
-Clicar em Pesquisar
+clicar em Pesquisar
     Click Element                               //*[@id="bt_pesquisar:button"]/span[2]
 
 clicar em editar
@@ -64,25 +64,25 @@ clicar em gravar
     Click Element                               //*[@id="bt_confirmar:button"]
 
 *** Test Cases ***
-cenário 1: Abrir navegador colocar login e senha e clicar em entrar
+Cenário 1: Abrir navegador colocar login e senha e clicar em entrar
     abrir navegador
     maximizar janela
     colocar login
     clicar em entrar    
     clicar em outros modulos
     
-cenario 2: Acessar outros modulos → configuracoes → sistema → parametros de sistema
+Cenário 2: Acessar outros modulos → configuracoes → sistema → parametros de sistema
     clicar em configuracoes
     clicar em sistema
     clicar em parametros do sistema
 
-cenario 3: Inserir o nome do parametro e pesquisar
+Cenário 3: Inserir o nome do parametro e pesquisar
     trocar frame para parametros
     inserir nome do parametro
     Clicar em Pesquisar
 
    
-cenario 4: Clicar em Editar, alterar valor texto e clicar em gravar
+Cenário 4: Clicar em Editar, alterar valor texto e clicar em gravar
     clicar em editar
     alterar valor texto
     clicar em gravar
