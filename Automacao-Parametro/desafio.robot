@@ -6,6 +6,7 @@ ${input_usuario}                //*[@id="usuario:usuario:inputId"]
 ${input_senha}                  //*[@id="password:inputId"]
 ${input_parametro}              //*[@id="nome:nome:inputId"]
 ${input_valor}                  //*[@id="vlrTexto:vlrTexto:inputId"]
+${msg_sucesso}                  //span[contains(text(), 'alterado com sucesso')]
 
 
 *** Keywords ***  
@@ -53,15 +54,19 @@ clicar em Pesquisar
 
 clicar em editar
     Click Element                               //*[@id="tabelaResult:resultList:0:tabelaResult_link_editar:link"]
-    sleep       1s
+    Wait Until Element Is Visible               ${input_valor}          5s
 
 alterar valor texto
+    sleep       1s
     Input Text                                  ${input_valor}          S
-
+    
 clicar em gravar
     Wait Until Element Is Visible               //*[@id="bt_confirmar:button"]
     Scroll Element Into View                    //*[@id="bt_confirmar:button"]
     Click Element                               //*[@id="bt_confirmar:button"]
+
+validar alteracao
+    Wait Until Page Contains Element            ${msg_sucesso}            5s
 
 *** Test Cases ***
 Cenário 1: Abrir navegador colocar login e senha e clicar em entrar
@@ -86,3 +91,5 @@ Cenário 4: Clicar em Editar, alterar valor texto e clicar em gravar
     clicar em editar
     alterar valor texto
     clicar em gravar
+    validar alteracao
+    fechar navegador
