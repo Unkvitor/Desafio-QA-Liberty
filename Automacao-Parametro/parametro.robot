@@ -27,21 +27,22 @@ fechar navegador
     close Browser
 
 clicar em outros modulos
-    Wait Until Element Is Visible                //*[@id="nav-scroll"]/ul/li[11]/a
-    Scroll Element Into View                     //*[@id="nav-scroll"]/ul/li[11]/a
-    Click Element                                //*[@id="nav-scroll"]/ul/li[14]/a/span
+    Wait Until Element Is Visible                //span[text()='Indicadores']
+    Scroll Element Into View                     //span[text()='Indicadores']
+    Click Element                                //span[text()='Outros Módulos']
+
 
 clicar em configuracoes
-    Scroll Element Into View                     //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span
-    Click Element                                //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/a/span
+    Scroll Element Into View                     //span[text()='Configuração']
+    Click Element                                //span[text()='Configuração']
 
 clicar em sistema                   
-    Scroll Element Into View                     //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a
-    Click Element                                //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/a
+    Scroll Element Into View                     //span[text()='Sistema']
+    Click Element                                //span[text()='Sistema']
 
 clicar em parametros do sistema     
-    Scroll Element Into View                     //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
-    Click Element                                //*[@id="nav-scroll"]/ul/li[14]/ul/li[5]/ul/li[1]/ul/li[1]/a/span
+    Scroll Element Into View                     //span[text()='Parâmetros de Sistema']
+    Click Element                                //span[text()='Parâmetros de Sistema']
 
 trocar frame para parametros
     Select Frame                                 //*[@id="i_frame_parâmetros_de_sistema"]   
