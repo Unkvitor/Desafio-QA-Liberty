@@ -70,25 +70,25 @@ validar alteracao
     Wait Until Page Contains Element            ${msg_sucesso}            5s
 
 *** Test Cases ***
-Cenário 1: Abrir navegador colocar login e senha e clicar em entrar
+Cenário 1: Abrir navegador -> colocar login e senha -> clicar em entrar
     abrir navegador
     maximizar janela
     colocar login
     clicar em entrar    
-    clicar em outros modulos
     
-Cenário 2: Acessar outros modulos → configuracoes → sistema → parametros de sistema
+Cenário 2: Acessar outros modulos -> configuracoes -> sistema -> parametros de sistema
+    clicar em outros modulos
     clicar em configuracoes
     clicar em sistema
     clicar em parametros do sistema
 
-Cenário 3: Inserir o nome do parametro e pesquisar
+Cenário 3: Inserir o nome do parametro -> pesquisar
     trocar frame para parametros
     inserir nome do parametro
     Clicar em Pesquisar
 
    
-Cenário 4: Clicar em Editar, alterar valor texto e clicar em gravar
+Cenário 4: Clicar em Editar -> alterar valor texto -> clicar em gravar
     clicar em editar
     alterar valor texto
     clicar em gravar
