@@ -20,9 +20,9 @@ fazer login
     Click Element                                //*[@id="entrar"]/span
 
 acessar modulo de pacientes
-    Wait Until Element Is Visible                //span[text()='Pacientes']             timeout=5s
+    Wait Until Element Is Visible                //span[text()='Pacientes']             timeout=10s
     Click Element                                //span[text()='Pacientes']
-    Wait Until Element Is Visible                //span[text()='Pesquisar Pacientes']   timeout=5s
+    Wait Until Element Is Visible                //span[text()='Pesquisar Pacientes']   timeout=10s
     Click Element                                //span[text()='Pesquisar Pacientes']
 
 trocar frame
