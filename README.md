@@ -4,10 +4,10 @@ Este projeto contém duas automações de teste funcionais desenvolvidas com Rob
 
 ## Objetivo
 
-Automatizar os seguintes fluxos funcionais no ambiente de treinamento da Liberty:
+Automatizar e testar os seguintes fluxos funcionais no ambiente de treinamento da Liberty:
 
-1. Alteração de parâmetro no módulo de Configurações
-2. Pesquisa de Pacientes e inclusão via SIGA
+1. Alteração de parâmetro no módulo de Outros Módulos se estiver com o valor "N".
+2. Pesquisa de Pacientes e Verificação da Disponibilidade do SIGA Saúde.
 
 ## Estrutura do Projeto
 
