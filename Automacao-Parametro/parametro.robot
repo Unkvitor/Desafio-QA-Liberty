@@ -76,7 +76,7 @@ validar alteracao
     Wait Until Element Is Visible               xpath=//*[@id="tabelaResult:resultList_data"]/tr/td[6][normalize-space(text()) = 'S']    timeout=3s
 
 *** Test Cases ***
-Cenário 1: Abrir navegador -> colocar login e senha -> clicar em entrar
+Cenário 1: realizar login no sistema
     abrir navegador
     maximizar janela
     colocar login
@@ -94,7 +94,7 @@ Cenário 3: Inserir o nome do parametro -> pesquisar
     Clicar em Pesquisar
     
    
-Cenário 4: Clicar em Editar -> alterar valor texto -> clicar em gravar
+Cenário 4: Alterar parâmetro quando valor atual é 'N'
     verificar valor atual do parametro
     clicar em editar
     alterar valor texto
