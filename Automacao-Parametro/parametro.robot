@@ -66,8 +66,14 @@ clicar em gravar
     Scroll Element Into View                    //*[@id="bt_confirmar:button"]
     Click Element                               //*[@id="bt_confirmar:button"]
 
+verificar valor atual do parametro
+    ${valor_atual}=    Get Text    //*[@id="tabelaResult:resultList_data"]/tr/td[6]
+    Log    Valor atual do parâmetro: ${valor_atual}
+    Run Keyword If    '${valor_atual}' == 'S'    Log    Nenhuma alteração necessária.
+    Run Keyword If    '${valor_atual}' == 'S'    Pass Execution    Valor já está como S.
+
 validar alteracao
-    Wait Until Page Contains Element            ${msg_sucesso}            5s
+    Wait Until Element Is Visible               xpath=//*[@id="tabelaResult:resultList_data"]/tr/td[6][normalize-space(text()) = 'S']    timeout=3s
 
 *** Test Cases ***
 Cenário 1: Abrir navegador -> colocar login e senha -> clicar em entrar
@@ -86,9 +92,10 @@ Cenário 3: Inserir o nome do parametro -> pesquisar
     trocar frame para parametros
     inserir nome do parametro
     Clicar em Pesquisar
-
+    
    
 Cenário 4: Clicar em Editar -> alterar valor texto -> clicar em gravar
+    verificar valor atual do parametro
     clicar em editar
     alterar valor texto
     clicar em gravar
