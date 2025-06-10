@@ -63,8 +63,9 @@ clicar em pesquisar SIGA
     Click Element                              //*[@id="bt_pesquisar_paciente_siga:button"]
 
 # Rola até o fim da tela, clica em voltar e aguarda o carregamento da lista novamente
-clicar em voltar 
-    Press Keys    NONE    END
+clicar em voltar
+    Wait Until Element Is Visible             //*[@id="field_prontuario:prontuario"]                   timeout=10s
+    Press Keys          NONE        END
     Wait Until Element Is Visible             //*[@id="bt_cancelar_cadastro:button"]                    timeout=10s
     Click Element                             //*[@id="bt_cancelar_cadastro:button"]
     Wait Until Element Is Visible             //*[@id="tabelaPacientes:resultList:0:outputTextNome"]    timeout=5s
@@ -107,3 +108,5 @@ cenario 2: Paciente não localizado localmente e SIGA indisponivel
     clicar em pesquisar SIGA
     validar indisponibilidade do SIGA
     fechar navegador
+
+    
