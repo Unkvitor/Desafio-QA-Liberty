@@ -89,7 +89,7 @@ verificar valor atual do parametro
     Log    Valor atual do parâmetro: ${valor_atual}
     Run Keyword If    '${valor_atual}' == 'S'    Log    Nenhuma alteração necessária.
     Run Keyword If    '${valor_atual}' == 'S'    Pass Execution    Valor já está como S.
-    fechar navegador
+    
 
 # Valida que o valor foi realmente alterado para 'S' após a gravação
 validar alteracao
